@@ -50,7 +50,7 @@ namespace Emsproject
         {
             ddltype.Items.Add("Mobile");
             ddltype.Items.Add("Laptop");
-            ddltype.Items.Add("Tablet");
+            ddltype.Items.Add("Tablet"); 
             ddltype.Items.Insert(0, new ListItem("Select Type"));
         }
 
