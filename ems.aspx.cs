@@ -26,7 +26,7 @@ namespace Emsproject
                 
                     conn.Open();
                 
-                Console.WriteLine("Database Connected Succesfully");
+                Response.Write("Database Connected Succesfully");
 
 
             }
@@ -43,6 +43,7 @@ namespace Emsproject
             if (!Page.IsPostBack)
             {
                 fnBindtype();
+                fnConnection();
             }
 
             
