@@ -93,6 +93,18 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style7">Assesories:</td>
+                    <td class="auto-style8">
+                        <asp:CheckBoxList ID="cblass" runat="server" RepeatDirection="Horizontal">
+                            <asp:ListItem>Charger</asp:ListItem>
+                            <asp:ListItem>wireless mouse</asp:ListItem>
+                            <asp:ListItem>Touchpen</asp:ListItem>
+                            <asp:ListItem>cover</asp:ListItem>
+                            <asp:ListItem></asp:ListItem>
+                        </asp:CheckBoxList>
+                    </td>
+                </tr>
+                <tr>
                     <td aria-orientation="horizontal" colspan="2">
                         <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" Text="Submit" Width="162px" />
 &nbsp;&nbsp;&nbsp;

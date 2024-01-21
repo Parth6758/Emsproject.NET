@@ -57,13 +57,18 @@ namespace Emsproject
             String desc = txtdesc.Text;
             String quantity = txtquantity.Text;
             String color = rblcolor.Text;
+            String Ass = cblass.Text;
 
-            String resultText = "Type: " + type + "</br>" + 
+            String resultText = "Type: " + type + "</br>" +
             "Brand: " + brand + "</br>" +
             "Model: " + model + "</br>" +
             "desc: " + desc + "</br>" +
             "quantity: " + quantity + "</br>" +
-            "color: " + color;
+            "color: " + color + "</br>" +
+            "Assesories: " + Ass + "</br>";
+
+
+
 
 
 
