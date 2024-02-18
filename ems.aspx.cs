@@ -199,6 +199,45 @@ namespace Emsproject
             }
         }
 
+        public void updatedata()
+        {
+            try
+            {
+                fnConnection();
+                String qry = "UPDATE tblDevice SET model = @model, description = @description, Price = @Price, quantity = @quantity  WHERE b_id = @b_id";
+                cmd = new SqlCommand(qry, conn);
+                //  cmd.Parameters.AddWithValue("@type", Ddltype);
+                //  cmd.Parameters.AddWithValue("@brand", Ddlbrand);
+                //cmd.Parameters.AddWithValue("@did", Textdid);
+                cmd.Parameters.AddWithValue("model", txtmodel.Text);
+                cmd.Parameters.AddWithValue("description", txtdesc.Text);
+                cmd.Parameters.AddWithValue("Price", txtprice.Text);
+                cmd.Parameters.AddWithValue("quantity", txtquantity.Text);
+                //    cmd.Parameters.AddWithValue("@color", Rblcolors);
+                //    cmd.Parameters.AddWithValue("@accessories", Cbllist);
+                cmd.Parameters.AddWithValue("b_id", b_id);
+                int res = cmd.ExecuteNonQuery();
+                if (res > 0)
+                {
+                    Response.Write("Updated");
+                }
+                else
+                {
+                    Response.Write("Not Updated");
+                }
+
+                conn.Close();
+                fnBindBrand();
+
+
+            }
+            catch (Exception e)
+            {
+
+                Response.Write(e.ToString());
+            }
+        }
+
         protected void Reset_Click(object sender, EventArgs e)
         {
             ddltype.SelectedIndex = -1;
@@ -249,6 +288,11 @@ namespace Emsproject
                 }
             }
 
+        }
+
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            updatedata();
         }
     }
 }
