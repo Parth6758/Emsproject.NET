@@ -119,6 +119,8 @@
                         <asp:Button ID="Insert" runat="server" Text="Insert" Width="162px" OnClick="Insert_Click" />
                     &nbsp;&nbsp;
                         <asp:Button ID="Update" runat="server" Text="Update" Width="162px" OnClick="Update_Click" />
+                    &nbsp;&nbsp;
+                        <asp:Button ID="Delete" runat="server" Text="Delete" Width="162px" OnClick="Delete_Click" />
                     </td>
                 </tr>
             </table>

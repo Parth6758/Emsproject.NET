@@ -57,7 +57,6 @@ namespace Emsproject
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -101,6 +100,7 @@ namespace Emsproject
 
 
             Label1.Text = resultText;
+
         }
 
         protected void ddltype_SelectedIndexChanged(object sender, EventArgs e)
@@ -238,6 +238,31 @@ namespace Emsproject
             }
         }
 
+        public void delete()
+        {
+            try
+            {
+                fnConnection();
+                String qry = "DELETE FROM tblDevice WHERE b_id = @b_id";
+                cmd = new SqlCommand(qry, conn);
+                cmd.Parameters.AddWithValue("b_id", b_id);
+                int res = cmd.ExecuteNonQuery();
+                if (res > 0)
+                {
+                    Response.Write("Data Removed");
+                }
+                else
+                {
+                    Response.Write("Not deleted");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         protected void Reset_Click(object sender, EventArgs e)
         {
             ddltype.SelectedIndex = -1;
@@ -248,6 +273,7 @@ namespace Emsproject
             txtquantity.Text = String.Empty;
             rblcolor.ClearSelection();
             cblass.ClearSelection();
+            Label1.Text = "Output";
 
 
 
@@ -293,6 +319,11 @@ namespace Emsproject
         protected void Update_Click(object sender, EventArgs e)
         {
             updatedata();
+        }
+
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            delete();
         }
     }
 }
