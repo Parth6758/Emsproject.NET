@@ -12,6 +12,23 @@
             <strong>
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             </strong>:</div>
+        
+        <p>
+            <strong>
+                <asp:Label ID="lblname" runat="server" Text="name"></asp:Label>
+            </strong>
+        </p>
+        <p>
+            <strong>
+                <asp:Label ID="Lblphone" runat="server" Text="phone"></asp:Label>
+            </strong>
+        </p>
+        <p>
+            <strong>
+                <asp:Label ID="lbladd" runat="server" Text="address"></asp:Label>
+            </strong>
+        </p>
+        
     </form>
 </body>
 </html>
